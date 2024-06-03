@@ -1,0 +1,8 @@
+README
+
+Sprint 11 - Machine Learning
+
+
+This report will analyze subscription data from mobile carrier Megaline's subscribers. Megaline would like to suggest a new plan and depending on their usage, it would recommend the Smart or Ultra plan.
+
+For this task we will build several machine learning models using python, and find the more accurate performing one to make predictions about their users who have not yet upgraded to one of the newer plans. In this test the accuracy threshold is 0.75 (75% accurate).
