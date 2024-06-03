@@ -1,0 +1,179 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 HelveticaNeue-Bold;
+\f3\fmodern\fcharset0 Courier;\f4\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red0\green0\blue0;\red36\green43\blue141;
+\red33\green89\blue153;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;\cssrgb\c18824\c24706\c62353;
+\cssrgb\c16078\c43137\c66667;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13340\viewh15180\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ltv_cust_pivot.reset_index()[6].mean(\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 \cb2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 2.1\
+The MAU starts off slow, around 13,000 monthly for the first two month before it starts to increase. After 3 months it rises to over 20,000 active users a month for the rest of the year. The average MAU is 23,228 unique users.\
+Looking at the WAU, more fluctuations can be seen but it follows the same pattern. Slow for the first three months, reaching highs between October 2017 and April 2018 before dropping below the average of 5825 WAU in May 2018.\
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf0 \cb2 \strokec3 The plot for DAU shows the most fluctuations and reflects the pattern of users to be more active on certain days of the week. Throughout the year, the daily users stayed between 500 and 1500 users, averaging 908 users with half the days having more than 921 users.
+\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 \strokec3 \
+2.2\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 \strokec3 There is an average of 987 sessions a day. Divided by the average 907 unique visitors a day makes an average of 1.08 sessions per user. Below we see how the sessions per user rate was for every day.\
+\
+2.3\
+The websites visits come from desktop and mobile (touch) devices. Visitors who came from desktop devices spent 47% more time on the site (an average of 704 seconds) than mobile users (479 seconds).\
+Overall the average session length was 643.51 seconds but since the distribution of session duration by number of users is not normal, the mode will give us a better representation of the typical session length which is 60 seconds.\
+\
+2.4\
+After the first month, retention rate drops way down and only a small percentage of users return. Only during the first 6 cohorts of this time frame do we have retention rates above 7% in the second month. They continue to drop and by June 2018, very few people are visiting the site at all.\
+\
+Finding average of a column in a pivot table:\
+ltv_cust_pivot.reset_index()[6].mean()\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf0 \cb1 \strokec3 3.1\'a0\'a0When do people start buying?\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 How long after registering does the user become a customer?\
+\pard\pardeftab720\qr\partightenfactor0
+
+\f3 \cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 \strokec3 To find out when the conversion happens for a customer we begin by isolating the first order, importing the first visit and finding the difference between the two in days. Then we can plot the data and find out when most of the conversion happens.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 \strokec3 \
+As we can see in the histogram, most of the conversion happens before 10 days. Looking deeper using value counts percentages, 67% of conversion happens in the first 5 days (days 0-4). Most buyers convert at 0 days (37%), followed by 4 days, when customers come to the site to buy as a first visit. Since the distribution is not normal, we will go by the median of 2 day.\
+\
+Overall, 16% of users converted into paying customers!\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf0 \cb2 \strokec3 3.2\'a0\'a0How many orders do they make during a given period of time?\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 \cb2 \strokec3 \
+This pivot table and heatmap show the cumulative sum of orders per customer for each cohort. After 9 months (age 8 months), each customer in the first cohort made more than 2 purchases overall. The next cohorts did not come close but consistantly made around 1.5 purchases over the same amount of time. On average, all cohorts made 1.3 orders per customer after 4 months (age 3).\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf0 \cb2 \strokec3 \
+3.3\'a0\'a0What is the average purchase size?{\field{\*\fldinst{HYPERLINK "https://jupyterhub.tripleten-services.com/user/user-3-6753c067-58a9-4ce3-bbc4-b8e98ef33889/notebooks/da3c63d0-a667-4f29-98fa-66cf5603dbf7.ipynb#What-is-the-average-purchase-size?"}}{\fldrslt \cf5 \cb2 \strokec5 \'b6}}\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 \cb2 \strokec3 \
+The average purchase per customer is 7.65. Looking at the average of all cohorts, it seems that the total revenue starts off low, peaks around 4 months to 14.8 and then goes down again to hover around the average. This can be elucidated further by looking at the figure for average purchase size. It reveals that most of the cohorts hover around the same average (6 or below) but two cohorts did better than the rest, September 2017 and December 2017, skewing the average by having large peaks around in their 4th month (age 3). We can see that these cohorts outperfomed the others in general, having an average purchase size of 17 and 14, respectively.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf0 \cb1 \strokec3 3.4\'a0\'a0How much money do they bring? (LTV)\
+\pard\pardeftab720\qr\partightenfactor0
+
+\f3\b0 \cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 \strokec3 We examine the LTV first by looking at the total revenue for each cohort and for each order month. The size of each cohort is merged into the table so each revenue can be divided by cohort size to get ltv values for each month. In actuality the LTV values we are looking for are cumulative sums through time so we use that function when making our pivot table.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 \strokec3 In the heatmap above we can see the actual lifetime value for each customer and how it differs for each cohort. September 2017 had the highest (12.31 after 6 months, 13.44 after 9 months), followed by December 2017 (7.64 after 6 months, 10.45 after 9 months).\
+\
+For the first 7 cohorts, the average revenue per customer after 6 months (age 5) was 7.97. The remaining cohorts did much worse but we have no data for six months. We can see that their average for the first 3 months is 4.9 compared to 6.2 for the earlier ones.\
+\
+Overall, we can see that the first 7 cohorts (June-December 2017) did much better than the later ones.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf0 \cb2 \strokec3 4.1\'a0\'a0How much money was spent? Overall, per source and over time.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 \cb2 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 \strokec3 Over the whole 12 months, 329131.62 was spent on marketing across all 7 sources.\
+The most money was spent on source 3 (141k), followed by source 4 and 5 (61k and 52k respectively).\
+\
+The most money was spent between October 2017 and March 2018. With a large peak in spending in sources 2 and 3 on November 26th and 24th respectively. Fortunately, the marketing spending in these months increased the daily active users and the large investment in source 3 on November 24th gave a huge rise with 3,319 visits that day.\
+\
+However, although the large marketing push through source 3 on Nov 24, 2017 brought a record number of users. It cost 1,788 and only brought 809 of the 6776 made on that day. Most of the orders on that day came from source 1.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf0 \cb2 \strokec3 4.2\'a0\'a0How much did customer acquisition from each of the sources cost?\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 \cb1 \strokec3 The costs to acquire a customer doesn't have a positive correlation with the daily active users as much as the marketing costs did but we can draw many insights from it. When the CAC was high, for example in Aug 2017 when it reached 10.8, not many users were attracted, so the cost per visitor went up. When more spending took place from September 2017- March 2018, more buying visitors were attracted so the CAC went down.\
+\pard\pardeftab720\qr\partightenfactor0
+
+\f3 \cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 \strokec3 To calculate CAC for each source we need to isolate which sources these costs were coming from and which visitors we attracted.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 \strokec3 Common trends? Sources 2 and 3 had the most cost associated with them. Sources 9 and 10 had the least cost associated with them. Let's see how much money these customers brought in and see if they were worth the costs.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf0 \cb2 \strokec3 4.3\'a0\'a0How worthwhile where the investments? (ROI)\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 \cb2 \strokec3 With an ROI value less than one, we are not making money from the first month, we have to wait for our investment to acquire the customer to pay off. The cohorts that did best on revenue also had the best return on investment. Only these two cohorts, September 2017 and June 2017 have a return on investment over one and that only happens after four and six months. All the other cohorts are increasing, but very slowly.\
+\
+Marketing sources 1 and 2 have the best ROMI and they should be continued and boosted.\
+Source 3 had the worst ROMI and should be abandoned, and judging by the data here, so should 10 and 4 as they all had ROMI's less than 1. Sources 5 and 9 barely had a return on market investment and should be examined and tweaked if they are desired sources.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b\fs36 \cf0 \cb2 \strokec3 Step 3. Write a conclusion: advise marketing experts how much money to invest and where.
+\f0\b0 \
+What sources/platforms would you recommend? Back up your choice: what metrics did you focus on? Why? What conclusions did you draw after finding the metric values?\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \cb2 \outl0\strokewidth0 Marketing sources 1 and 2 have the best ROMI and they should be continued and boosted.  Although source 2 had a large CAC, its return on investment still makes it a promising source.   \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs36 \cf0 \cb2 \outl0\strokewidth0 \strokec3 \
+Marketing efforts attracted a total of 359400 visits to the site \cb2 \outl0\strokewidth0 averaging 987 visits a day by 907 unique visitors (1.08 sessions/user).\cb2 \outl0\strokewidth0 \strokec3   The MAU was 23,228 unique users, WAU was 5825 and DAU was 907.   73% of these visits were from desktop devices and 27% from touch devices (phones and tablets) and the typical session length was 60 seconds.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 \outl0\strokewidth0 For users that registered during the first six months, more than 7% of them came back to the site in consecutive months (retention rate).  However, in 2018, the retention rate fell to 5% and below.  By June 2018 there were very few people visiting the site. \
+\cb2 \outl0\strokewidth0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Overall, 16% of users converted into paying customers with most conversions in the first two days, usually \cb2 \outl0\strokewidth0 happening the first time they came to the site\cb2 \outl0\strokewidth0 \strokec3 .  Paying customers averaged 1.3 orders per customer after the the first four months.  The first cohort of customers did the best, making more than two purchases each after 9 months.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 \outl0\strokewidth0 Overall, to acquire a customer, the costs outweigh the benefits until several months in when the customer spends more.   In fact, only two cohorts of new customers, June 2017 and September 2017, had enough purchases to make up the cost associated with acquiring the customer and this only took place after the 7th month (June 2017) and 4th month (September 2017).  The cohort of December 2017 comes close with a ROMI of 0.87 in the 6th month when our data ends.  Other cohorts have increasing ROMI values approaching 1, hinting to success in the future but did not grow in the same way these two cohorts did.  Attention should be directed in particular to the marketing strategies used for these cohorts.\cb2 \outl0\strokewidth0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+The average check is 7.65 and remains steady throughout the year.  However the September 2017 and December 2017 cohorts had large peaks in purchase size in their fourth month.  It follows that these two cohorts had the highest lifetime value.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 \outl0\strokewidth0 \
+These cohorts also had the best return on investment.  There was a huge boost in ROI value between the 3rd and 4th month for the December 2017 cohort.  This could have been due to marketing push leading to increased spending in March 2018.  The September 2017 cohort of customers stayed mostly steady through that month but did have a significant increase also between their 4th and 5th month. \
+\
+Perhaps the money that was spent in December 2017 ( for September cohorts fourth month) and in March 2018 (December\'92s fourth month) was due to high profile events and those events should be continued to be promoted.  This could also be attributed to marketing.  If there were specific marketing techniques such as coupons that were targeted at those customers to back up their high retention rate, should be continued.\cb2 \outl0\strokewidth0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+Sources 2 and 3 had the most costs associated with them to acquire customers.  The most money was spent on marketing for source 3 but this source had the worst return on investment.   This high cost sum comes from a large marketing push on November 24, 2017, the Friday after Thanksgiving (\'93Black Friday\'94).  Although there was a record amount of visits that day (3,319, about 1500 more than most days) and made sales, the marketing campaign cost 1,788 but only brought in 809 of the 6776 of sales made on that day.  This source should be reevaluated and most likely discontinued.  \cb2 \outl0\strokewidth0 The most sales on that day were brought in from source 1. \cb2 \outl0\strokewidth0 \strokec3 \
+\
+Sources 1 and 2 had the best ROMI and should be continued.\
+  \
+Source 1 also had the best ROMI overall (1.5) making it the best return on investment per customer.   When calculated according to the customers that were acquired though it as a first source, source 1 was the leader in gross profit.  Source 1 brought in \cb2 \outl0\strokewidth0 10,257 in\cb2 \outl0\strokewidth0 \strokec3  gross profit.   Although it also accounted for the second highest marketing cost, source 2 was worth the investment.   \cb2 \outl0\strokewidth0 Source 2 has an ROMI of 1.1.  It had similar spending to source 3 but had much more success.  It brought in a total of 69169.15 in revenue for a cost of 42806 giving 26,363 in gross profit.  When looking at its role as a first source for customers, it brought in 46923 giving a small smaller profit.  The discrepancy possibly means that this source was able to bring previous customers for a return purchase.  This source should be continued.\
+\
+These sources led the marketing sources in gross profit, with sources 5 and 9 also turning a small profit.  These sources also reported an ROMI value over 1 and should also be studied and continued.\cb2 \outl0\strokewidth0 \strokec3 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs28 \cf0 \cb2 \strokec3 \
+}
